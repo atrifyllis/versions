@@ -19,7 +19,7 @@ archUnit = "1.0.1"
 jMoleculesArchUnit = "1.0.0"
 native = "0.9.19"
 kover = "0.6.1"
-
+kafkaTestContainers = "1.17.6"
 
 [libraries]
 hibernateTypes = { module = "com.vladmihalcea:hibernate-types-60", version.ref = "hibernateTypes" }
@@ -42,6 +42,8 @@ openapiKotlin = { module = "org.springdoc:springdoc-openapi-starter-common", ver
 ff4jSpring = { module = "org.ff4j:ff4j-spring-boot-starter", version.ref = "ff4j" }
 ff4jWeb = { module = "org.ff4j:ff4j-web", version.ref = "ff4j" }
 ff4jSpringJdbc = { module = "org.ff4j:ff4j-store-springjdbc", version.ref = "ff4j" }
+
+kafkaTestContainers =  { module = "org.testcontainers:kafka", version.ref = "kafkaTestContainers"}
 
 archUnit = { module = "com.tngtech.archunit:archunit-junit5", version.ref = "archUnit" }
 jMoleculesArchUnit = { module = "org.jmolecules:jmolecules-archunit", version.ref = "jMoleculesArchUnit" }
