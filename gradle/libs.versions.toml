@@ -20,6 +20,7 @@ jMoleculesArchUnit = "1.0.0"
 native = "0.9.19"
 kover = "0.6.1"
 kafkaTestContainers = "1.17.6"
+jooqDocker = "3.0.13"
 
 [libraries]
 hibernateTypes = { module = "com.vladmihalcea:hibernate-types-60", version.ref = "hibernateTypes" }
@@ -43,7 +44,7 @@ ff4jSpring = { module = "org.ff4j:ff4j-spring-boot-starter", version.ref = "ff4j
 ff4jWeb = { module = "org.ff4j:ff4j-web", version.ref = "ff4j" }
 ff4jSpringJdbc = { module = "org.ff4j:ff4j-store-springjdbc", version.ref = "ff4j" }
 
-kafkaTestContainers =  { module = "org.testcontainers:kafka", version.ref = "kafkaTestContainers"}
+kafkaTestContainers = { module = "org.testcontainers:kafka", version.ref = "kafkaTestContainers" }
 
 archUnit = { module = "com.tngtech.archunit:archunit-junit5", version.ref = "archUnit" }
 jMoleculesArchUnit = { module = "org.jmolecules:jmolecules-archunit", version.ref = "jMoleculesArchUnit" }
@@ -67,6 +68,7 @@ sonarqube = { id = "org.sonarqube", version.ref = "sonarqube" }
 versionChecker = { id = "com.github.ben-manes.versions", version.ref = "versionChecker" }
 native = { id = "org.graalvm.buildtools.native", version.ref = "native" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+jooqDocker = { id = "dev.monosoul.jooq-docker", version.ref = "jooqDocker" }
 
 
 
