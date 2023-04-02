@@ -23,6 +23,8 @@ kafkaTestContainers = "1.17.6"
 jooqDocker = "3.0.13"
 jooq = "3.18.1"
 gitProperties = "2.4.1"
+micrometerPrometheus = "1.10.5"
+micrometerZipkinBrave = "1.0.3"
 
 [libraries]
 hibernateTypes = { module = "com.vladmihalcea:hibernate-types-60", version.ref = "hibernateTypes" }
@@ -53,12 +55,15 @@ kafkaTestContainers = { module = "org.testcontainers:kafka", version.ref = "kafk
 archUnit = { module = "com.tngtech.archunit:archunit-junit5", version.ref = "archUnit" }
 jMoleculesArchUnit = { module = "org.jmolecules:jmolecules-archunit", version.ref = "jMoleculesArchUnit" }
 
+micrometerPrometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometerPrometheus" }
+micrometerZipkinBrave = { module = "io.micrometer:micrometer-tracing-bridge-brave", version.ref = "micrometerZipkinBrave" }
 
 [bundles]
 jmolecules = ["jmoleculesDdd", "jmoleculesEvents", "jmoleculesSpring", "jmoleculesJackson"]
 openApi = ["openapiUi", "openapiKotlin"]
 ff4j = ["ff4jSpring", "ff4jWeb", "ff4jSpringJdbc"]
 archUnit = ["archUnit", "jMoleculesArchUnit"]
+micrometer = ["micrometerPrometheus", "micrometerZipkinBrave"]
 
 [plugins]
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
