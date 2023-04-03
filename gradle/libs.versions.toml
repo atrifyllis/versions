@@ -25,6 +25,7 @@ jooq = "3.18.1"
 gitProperties = "2.4.1"
 micrometerPrometheus = "1.10.5"
 micrometerZipkinBrave = "1.0.3"
+lokiLogbackAppender = "1.4.0"
 
 [libraries]
 hibernateTypes = { module = "com.vladmihalcea:hibernate-types-60", version.ref = "hibernateTypes" }
@@ -57,6 +58,8 @@ jMoleculesArchUnit = { module = "org.jmolecules:jmolecules-archunit", version.re
 
 micrometerPrometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometerPrometheus" }
 micrometerZipkinBrave = { module = "io.micrometer:micrometer-tracing-bridge-brave", version.ref = "micrometerZipkinBrave" }
+
+lokiLogbackAppender = { module = "com.github.loki4j:loki-logback-appender", version.ref = "lokiLogbackAppender" }
 
 [bundles]
 jmolecules = ["jmoleculesDdd", "jmoleculesEvents", "jmoleculesSpring", "jmoleculesJackson"]
