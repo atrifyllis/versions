@@ -1,5 +1,5 @@
 [versions]
-hibernateTypes = "2.21.1"
+hibernateTypes = "3.3.1"
 jmolecules = "1.6.0"
 jmoleculesIntegrations = "1.6.0"
 oktaSpring = "3.0.2"
@@ -25,9 +25,10 @@ jooq = "3.18.1"
 gitProperties = "2.4.1"
 micrometerDatasource = "1.0.1"
 lokiLogbackAppender = "1.4.0"
+micrometerTracing = "1.0.3"
 
 [libraries]
-hibernateTypes = { module = "com.vladmihalcea:hibernate-types-60", version.ref = "hibernateTypes" }
+hibernateTypes = { module = "io.hypersistence:hypersistence-utils-hibernate-60", version.ref = "hibernateTypes" }
 
 jmoleculesDdd = { module = "org.jmolecules:kmolecules-ddd", version.ref = "jmolecules" }
 jmoleculesEvents = { module = "org.jmolecules:jmolecules-events", version.ref = "jmolecules" }
@@ -58,12 +59,15 @@ jMoleculesArchUnit = { module = "org.jmolecules:jmolecules-archunit", version.re
 micrometerDatasource = { module = "net.ttddyy.observation:datasource-micrometer-spring-boot", version.ref = "micrometerDatasource" }
 
 lokiLogbackAppender = { module = "com.github.loki4j:loki-logback-appender", version.ref = "lokiLogbackAppender" }
+micrometerTracing = { module = "io.micrometer:micrometer-tracing", version.ref = "micrometerTracing" }
+micrometerTracingBrave = { module = "io.micrometer:micrometer-tracing-bridge-brave", version.ref = "micrometerTracing" }
 
 [bundles]
 jmolecules = ["jmoleculesDdd", "jmoleculesEvents", "jmoleculesSpring", "jmoleculesJackson"]
 openApi = ["openapiUi", "openapiKotlin"]
 ff4j = ["ff4jSpring", "ff4jWeb", "ff4jSpringJdbc"]
 archUnit = ["archUnit", "jMoleculesArchUnit"]
+micrometerTracing = ["micrometerTracing", "micrometerTracingBrave"]
 
 [plugins]
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
